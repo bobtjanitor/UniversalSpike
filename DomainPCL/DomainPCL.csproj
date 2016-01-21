@@ -34,8 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ExcelExport.cs" />
+    <Compile Include="GameBoardModel.cs" />
+    <Compile Include="GamePiece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

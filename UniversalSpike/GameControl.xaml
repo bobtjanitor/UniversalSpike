@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
+    <Grid DataContext="{Binding GameBoardModel, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -54,16 +54,15 @@
             <Rectangle Grid.Row="0" Grid.Column="3" Grid.RowSpan="5" Fill="Gray" />
             <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Fill="Gray" />
             <Rectangle Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Fill="Gray" />
-            <Button x:Name="Button_0_0" Grid.Row="0" Grid.Column="0" Click="Button_Click"/>
-            <Button x:Name="Button_0_1" Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
-            <Button x:Name="Button_0_2" Grid.Row="4" Grid.Column="0" Click="Button_Click"/>
-            <Button x:Name="Button_1_0" Grid.Row="0" Grid.Column="2" Click="Button_Click"/>
-            <Button x:Name="Button_1_1" Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
-            <Button x:Name="Button_1_2" Grid.Row="4" Grid.Column="2" Click="Button_Click"/>
-            <Button x:Name="Button_2_0" Grid.Row="0" Grid.Column="4" Click="Button_Click"/>
-            <Button x:Name="Button_2_1" Grid.Row="2" Grid.Column="4" Click="Button_Click"/>
-            <Button x:Name="Button_2_2" Grid.Row="4" Grid.Column="4"  Click="Button_Click"/>
-
+            <Button x:Name="Button_0_0" Grid.Row="0" Grid.Column="0" Content="{Binding Path=Piece_0_0.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_0_0.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }"  CommandParameter="{Binding Path=Piece_0_0}"/>
+            <Button x:Name="Button_0_1" Grid.Row="2" Grid.Column="0" Content="{Binding Path=Piece_0_1.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_0_1.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_0_1}"/>
+            <Button x:Name="Button_0_2" Grid.Row="4" Grid.Column="0" Content="{Binding Path=Piece_0_2.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_0_2.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_0_2}"/>
+            <Button x:Name="Button_1_0" Grid.Row="0" Grid.Column="2" Content="{Binding Path=Piece_1_0.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_1_0.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_1_0}"/>
+            <Button x:Name="Button_1_1" Grid.Row="2" Grid.Column="2" Content="{Binding Path=Piece_1_1.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_1_1.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_1_1}"/>
+            <Button x:Name="Button_1_2" Grid.Row="4" Grid.Column="2" Content="{Binding Path=Piece_1_2.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_1_2.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_1_2}"/>
+            <Button x:Name="Button_2_0" Grid.Row="0" Grid.Column="4" Content="{Binding Path=Piece_2_0.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_2_0.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_2_0}"/>
+            <Button x:Name="Button_2_1" Grid.Row="2" Grid.Column="4" Content="{Binding Path=Piece_2_1.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_2_1.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_2_1}"/>
+            <Button x:Name="Button_2_2" Grid.Row="4" Grid.Column="4" Content="{Binding Path=Piece_2_2.Content, Mode=TwoWay}" IsEnabled="{Binding Path=Piece_2_2.IsEnabled, Mode=TwoWay}" Command="{Binding SelectPieceCommand, Mode=TwoWay }" CommandParameter="{Binding Path=Piece_2_2}"/>
         </Grid>
     </Grid>
     <FlyoutBase.AttachedFlyout>

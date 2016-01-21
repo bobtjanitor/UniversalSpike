@@ -30,9 +30,7 @@ namespace UniversalSpike
                 GameContainer.Children.Add(Game);
             }
             Game.NewGame();
-            // GameContainer.Children.Clear();
-            //GameControl gameControl = new GameControl();
-
+           
         }
 
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
